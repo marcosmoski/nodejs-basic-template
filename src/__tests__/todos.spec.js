@@ -175,13 +175,14 @@ describe('Todos', () => {
   });
 
   it('should be able to delete a todo', async () => {
+    console.log('q')
     const userResponse = await request(app)
       .post('/users')
       .send({
         name: 'John Doe',
         username: 'user5'
       });
-
+      
     const todoDate = new Date();
 
     const todo1Response = await request(app)
